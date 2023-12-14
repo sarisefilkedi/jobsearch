@@ -1,6 +1,12 @@
-from mini_project import create_app
+from flask import Flask
+from login import login_blueprint
 
-app= create_app()
+def create_app():
+    app = Flask(__name__)
+    app.register_blueprint(login_blueprint)
+    return app
+
+app = create_app()
 
 if __name__ == '__main__':
-	app.run(debug=True, host='0.0.0.0', port = 5000)
+    app.run(debug=True, host='0.0.0.0', port=5000)
