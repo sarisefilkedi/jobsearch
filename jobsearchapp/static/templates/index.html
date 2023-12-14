@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <div class="form">
+        <div class="form__box">
+            <div class="form__left">
+                <div class="form__padding">
+                    <img src="https://i.pinimg.com/originals/8b/44/51/8b4451665d6b2139e29f29b51ffb1829.png" class="form__image">
+                </div>
+            </div>
+            <div class="form__right">
+                <div class="form__padding-right">
+                    <form>
+                        <h1 class="form__title">Member Login</h1>
+                        <input type="text" placeholder="Email" class="form__email">
+                        <input type="password" placeholder="******" class="form__password">
+                        <input type="submit" value="Login" class="form__submit-btn">
+                        <span>Forgot 
+                            <a href="#" class="form__link">Username</a> / 
+                            <a href="#" class="form__link">Password</a>
+                        </span>
+                        <p>
+                            <a href="#" class="form__link">Create your account</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
