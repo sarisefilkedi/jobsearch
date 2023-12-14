@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <div class="form">
+        <div class="form__box">
+            <div class="form__right">
+                <div class="form__padding-right">
+                    <form action="{{ url_for('search.search_jobs') }}" method="post">
+                        <h1 class="form__title">Job Search</h1>
+                        <input type="text" name="job_title" placeholder="Job Title" class="form__email">
+                        <!-- Add other search parameters -->
+                        <input type="submit" value="Search" class="form__submit-btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+        {% if jobs %}
+            <div id="jobs">
+                {% for job in jobs %}
+                    <div class="job">
+                        <h2>{{ job.title }}</h2>
+                        <!-- Display other job details -->
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
