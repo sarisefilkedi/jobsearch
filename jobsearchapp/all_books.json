@@ -1,0 +1,116 @@
+[
+	{
+		"literature" : "British",
+		"language" : "English",
+		"books" : [
+	 	  	{
+	 	  		"name":"Jane Eyre",
+	 	  		"writer":"Charlotte Brontë",
+	 	  		"genre":"novel",
+				"description":"\n\tJane Eyre is a novel by the English writer Charlotte Brontë. It was published on 19 October 1847 by Smith, Elder & Co. of London. Jane Eyre is a Bildungsroman which follows the experiences of its eponymous heroine, including her growth to adulthood and her love for Mr Rochester, the brooding master of Thornfield Hall. \n      "
+			},
+
+			{
+				"name":"Pride and Prejudice",
+				"writer":"Jane Austen",
+				"genre":"novel",
+				"description":"\n\tPride and Prejudice is an 1813 novel of manners by English author Jane Austen. The novel follows the character development of Elizabeth Bennet, the protagonist of the book, who learns about the repercussions of hasty judgments and comes to appreciate the difference between superficial goodness and actual goodness. Pride and Prejudice has consistently appeared near the top of lists of most-loved books among literary scholars and the reading public. It has become one of the most popular novels in English literature, with over 20 million copies sold, and has inspired many derivatives in modern literature.\n  "
+			},
+
+			{
+				"name":"Emma",
+				"writer":"Jane Austen",
+				"genre":"comedy",
+				"description":"\n\tEmma is a novel written by English author Jane Austen. It is set in the fictional country village of Highbury and the surrounding estates of Hartfield, Randalls and Donwell Abbey, and involves the relationships among people from a small number of families. The novel was first published in December 1815, although the title page is dated 1816. As in her other novels, Austen explores the concerns and difficulties of genteel women living in Georgian–Regency England. Emma is a comedy of manners. \n  "
+			},
+
+			{
+				"name":"Robinson Crusoe",
+				"writer":"Daniel Defoe",
+	 	  		"genre":"novel",
+				"description":"\n\tRobinson Crusoe is an English adventure novel by Daniel Defoe, first published on 25 April 1719. Written with a combination of Epistolary, confessional, and didactic forms, the book follows the title character (born Robinson Kreutznaer) after he is cast away and spends 28 years on a remote tropical desert island near the coasts of Venezuela and Trinidad, encountering cannibals, captives, and mutineers before being rescued. The story has been thought to be based on the life of Alexander Selkirk, a Scottish castaway who lived for four years on a Pacific island called Más a Tierra (now part of Chile) which was renamed Robinson Crusoe Island in 1966. Pedro Serrano is another real-life castaway whose story might have inspired the novel.\n  "
+			},
+
+			{
+				"name":"Frankenstein",
+				"writer":"Mary Shelley",
+	 	  		"genre":"science ficton",
+				"description":"\n\tFrankenstein; or, The Modern Prometheus is an 1818 novel written by English author Mary Shelley. Frankenstein tells the story of Victor Frankenstein, a young scientist who creates a sapient creature in an unorthodox scientific experiment.\n  "
+			},
+
+			{
+				"name":"A Tale of Two Cities",
+				"writer":"Charles Dickens",
+	 	  		"genre":"novel",
+				"description":"\n\tA Tale of Two Cities is a historical novel published in 1859 by Charles Dickens, set in London and Paris before and during the French Revolution. The novel tells the story of the French Doctor Manette, his 18-year-long imprisonment in the Bastille in Paris, and his release to live in London with his daughter Lucie whom he had never met. The story is set against the conditions that led up to the French Revolution and the Reign of Terror. \n  "
+			}
+		]
+	},
+
+	{
+		"literature":"American",
+                "language" : "English",
+		"books":[
+			{
+				"name":"Little Women",
+				"writer":"Louisa May Alcott",
+	 	  		"genre":"novel",
+				"description":"\n\tLittle Women is a coming-of-age novel written by American novelist Louisa May Alcott, originally published in two volumes in 1868 and 1869 at the request of her publisher. The story follows the lives of the four March sisters—Meg, Jo, Beth, and Amy—and details their passage from childhood to womanhood. Loosely based on the lives of the author and her three sisters, it is classified as an autobiographical or semi-autobiographical novel.\n      "
+			},
+
+			{
+				"name":"The Lord of the Rings",
+				"writer":"J. R. R. Tolkien",
+	 	  		"genre":"fantasy fiction",
+				"description":"\n\tThe Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien. Set in Middle-earth, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work. Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written, with over 150 million copies sold.\n      "
+			}
+		]
+	},
+
+	{
+		"literature":"Turkish",
+                "language" : "Turkce",
+		"books":[
+			{
+				"name":"Ince Memed",
+				"writer":"Yasar Kemal",
+	 	  		"genre":"novel",
+				"description":"\n\tA tale of high adventure and lyrical celebration, tenderness and violence, generosity and ruthlessness, Memed, My Hawk is the defining achievement of one of the greatest and most beloved of living writers, Yashar Kemal. It is reissued here with a new introduction by the author on the fiftieth anniversary of its first publication.\n      "
+			},
+
+			{
+				"name":"Kurk Mantolu Madonna",
+				"writer":"Sebahattin Ali",
+	 	  		"genre":"novel",
+				"description":"\n\tSabahattin Ali (February 25, 1907 – April 2, 1948) was a Turkish novelist, short-story writer, poet, and journalist.\n      "
+			},
+
+			{
+				"name":"Calikusu",
+				"writer":"Resat Nuri Guntekin",
+	 	  		"genre":"novel",
+				"description":"\n\tResat Nuri Guntekin (Istanbul, 25 November 1889 - London, 13 December 1956) was a Turkish novelist, storywriter and playwright. His novel, Calıkusu (The Wren, 1922) is about the destiny of a young Turkish female teacher in Anatolia; the movie was filmed on this book in 1966, and remade as TV series in 1986. His narrative has a detailed and precise style, with a realistic tone.\n      "
+			}
+		]
+	},
+
+	{
+		"literature":"Greek",
+                "language" : "English",
+		"books":[
+			{
+				"name":"Republic",
+				"writer":"Plato",
+	 	  		"genre":"Dialogue",
+				"description":"\n\tRepublic is a Socratic dialogue, authored by Plato around 375 BC, concerning justice, the order and character of the just city-state, and the just man. It is Plato's best-known work, and one of the world's most influential works of philosophy and political theory, both intellectually and historically.\n      "
+			},
+
+			{
+				"name":"Iliad",
+				"writer":"Homer",
+	 	  		"genre":"poem",
+				"description":"\n\tThe Iliad is one of two major ancient Greek epic poems attributed to Homer. It is one of the oldest extant works of literature still widely read by modern audiences. As with the Odyssey, the poem is divided into 24 books and was written in dactylic hexameter.\n      "
+			}
+		]
+	}
+]
