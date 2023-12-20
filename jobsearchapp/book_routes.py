@@ -3,9 +3,13 @@ import json
 
 book_blueprint = Blueprint('books', __name__)
 
+
 with open('all_books.json') as f:
     all_books = json.load(f)
 
+def book_home():
+    return render_template('book_home.html')
+    
 # Route for languages
 @book_blueprint.route('/languages/')
 def get_language():
