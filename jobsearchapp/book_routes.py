@@ -7,6 +7,8 @@ book_blueprint = Blueprint('books', __name__)
 with open('all_books.json') as f:
     all_books = json.load(f)
 
+
+@book_blueprint.route('/')
 def book_home():
     return render_template('book_home.html')
     
