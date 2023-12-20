@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Book Management</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Book Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
 </head>
 <body>
-    <h1>Welcome to the Book Management Section</h1>
+    <h1>Book Management</h1>
     <nav>
         <ul>
-            <li><a href="{{ url_for('books.book_home') }}">Home</a></li>
             <li><a href="{{ url_for('books.get_language') }}">View Languages</a></li>
             <li><a href="{{ url_for('books.get_literature') }}">View Literatures</a></li>
-            <!-- Add more links for other functionalities -->
         </ul>
     </nav>
 </body>
 </html>
+
