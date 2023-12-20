@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Languages</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <div class="form">
+        <div class="form__box">
+            <h1>Languages</h1>
+            <ul>
+                {% for language in languages %}
+                    <li><a href="{{ url_for('books.get_books_by_language', language=language) }}">{{ language }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
