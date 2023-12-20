@@ -38,7 +38,7 @@ def get_books_by_language(language):
     books = [lang['books'] for lang in all_books if lang['language'] == language]
     if len(books) == 0:
         return 'Language not found', 404
-    return render_template('books_by_language.html', books=books[0], language=language)
+    return render_template('books_in_language.html', books=books[0], language=language)
 
 # Route to get book description by literature and name
 @book_blueprint.route('/description/literature/<literature>/<bookname>/')
