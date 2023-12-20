@@ -5,15 +5,12 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
 </head>
 <body>
-    <div class="form">
-        <div class="form__box">
-            <h1>Literatures</h1>
-            <ul>
-                {% for literature in literatures %}
-                    <li><a href="{{ url_for('books.get_books_by_literature', literature=literature) }}">{{ literature }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
+    <h1>Literatures</h1>
+    <ul>
+        {% for literature in literatures %}
+            <li><a href="{{ url_for('books.books_by_literature', literature=literature) }}">{{ literature }}</a></li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
+
