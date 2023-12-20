@@ -56,4 +56,4 @@ def get_desc_by_lang_and_name(language, bookname):
         return 'Book not found', 404
     return render_template('book_description.html', book=book, language=language)
 
-# Add routes for other functionalities as needed
+
