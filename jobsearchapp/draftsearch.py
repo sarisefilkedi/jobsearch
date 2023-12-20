@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, render_template, request
+from flask import Flask, Blueprint, render_template, request, jsonify, json
 import requests
 
 # Create a Flask application
