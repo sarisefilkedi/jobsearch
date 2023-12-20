@@ -1,4 +1,3 @@
-from flask import Blueprint, render_template, request, redirect, url_for
 from models import db, User
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -26,7 +25,7 @@ def login():
         password = request.form['password']
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password, password):
-            return redirect(url_for('search.search_jobs'))
+            return redirect(url_for('books.book_home'))
         else:
             error = 'Invalid Credentials. Please try again.'
     return render_template('login.html', error=error)
