@@ -1,65 +1,45 @@
-from flask import Blueprint, render_template, request, jsonify
+from flask import Blueprint, render_template, jsonify, request
 import json
 
 book_blueprint = Blueprint('books', __name__)
 
-
 with open('all_books.json') as f:
     all_books = json.load(f)
 
-
 @book_blueprint.route('/')
 def book_home():
-    return render_template('book_home.html')
-    
-# Route for languages
+    return render_template('book_home.html'), 200
+
 @book_blueprint.route('/languages/')
 def get_language():
-    languages = list(set([item["language"] for item in all_books]))
-    return render_template('languages.html', languages=languages)
+    languages = list(set(item["language"] for item in all_books))
+    return render_template('languages.html', languages=languages), 200
 
-# Route for literatures
 @book_blueprint.route('/literatures/')
 def get_literature():
-    literatures = list(set([item["literature"] for item in all_books]))
-    return render_template('literatures.html', literatures=literatures)
+    literatures = list(set(item["literature"] for item in all_books))
+    return render_template('literatures.html', literatures=literatures), 200
 
-# Route to view books by literature
-@book_blueprint.route('/by_literature/<literature>/')
-def get_books_by_literature(literature):
-    books = [lite['books'] for lite in all_books if lite['literature'] == literature]
-    if len(books) == 0:
-        return 'Literature not found', 404
-    return render_template('books_by_literature.html', books=books[0], literature=literature)
+@book_blueprint.route('/literature/<literature>/')
+def books_by_literature(literature):
+    books = next((item["books"] for item in all_books if item["literature"] == literature), [])
+    if not books:
+        return jsonify({'error': 'Literature not found'}), 404
+    return render_template('books_list.html', books=books, category=literature), 200
 
-# Route to view books by language
-@book_blueprint.route('/by_language/<language>/')
-def get_books_by_language(language):
-    books = [lang['books'] for lang in all_books if lang['language'] == language]
-    if len(books) == 0:
-        return 'Language not found', 404
-    return render_template('books_in_language.html', books=books[0], language=language)
+@book_blueprint.route('/language/<language>/')
+def books_by_language(language):
+    books = next((item["books"] for item in all_books if item["language"] == language), [])
+    if not books:
+        return jsonify({'error': 'Language not found'}), 404
+    return render_template('books_list.html', books=books, category=language), 200
 
-# Route to get book description by literature and name
-@book_blueprint.route('/description/literature/<literature>/<bookname>/')
-def get_desc_by_lite_and_name(literature, bookname):
-    books = [lite['books'] for lite in all_books if lite['literature'] == literature]
-    if len(books) == 0:
-        return 'Literature not found', 404
-    book = next((book for book in books[0] if book['name'] == bookname), None)
+@book_blueprint.route('/book/<literature>/<bookname>/')
+def book_detail(literature, bookname):
+    book = next((book for item in all_books if item["literature"] == literature for book in item["books"] if book["name"] == bookname), None)
     if not book:
-        return 'Book not found', 404
-    return render_template('book_description.html', book=book, literature=literature)
+        return jsonify({'error': 'Book not found'}), 404
+    return render_template('book_detail.html', book=book), 200
 
-# Route to get book description by language and name
-@book_blueprint.route('/description/language/<language>/<bookname>/')
-def get_desc_by_lang_and_name(language, bookname):
-    books = [lang['books'] for lang in all_books if lang['language'] == language]
-    if len(books) == 0:
-        return 'Language not found', 404
-    book = next((book for book in books[0] if book['name'] == bookname), None)
-    if not book:
-        return 'Book not found', 404
-    return render_template('book_description.html', book=book, language=language)
 
 
