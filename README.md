@@ -30,6 +30,24 @@ There we need:
 * requests: which we need for HTTP requests, and we also need it to interact with APIs.
 * Flask-SQLAlchemy: is needed for our SQL database. It is also an Object-Relational Mapping (ORM) library for Python.
 
+Now, let's get started. Now that we're in the correct directory, let's finish the environment creation and initialise Python environment creation and activation.
+
+```
+sudo apt-get install python3-venv 
+Python3 -m venv myenv
+```
+From there, we should activate it.
+
+```
+source myenv/bin/activate 
+```
+Now that we are in the correct directory, let's add the applications. Here's the list of applications that you need to create:
+
+* main.py
+* login.py
+* models.py
+* book_routes.py
+
 
 
 
