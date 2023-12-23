@@ -48,6 +48,22 @@ Now that we are in the correct directory, let's add the applications. Here's the
 * models.py
 * book_routes.py
 
+In order to add the information to each of the following apps copy the code from the respective file and add it using the command below:
 
+```
+sudo nano main.py
+```
+After adding these apps to our directory we need to create a static directory and templates directory:
+```
+mkdir static
+mkdir templates
+```
+
+Here, let's start with the static one. Go to this directory and create the login.css file and populate it with the information from the login.css file:
+```
+cd static
+sudo nano login.css
+```
+This is used for the 'beautification' of our UI, which uses a picture which was shown in an open source website. Here's the link: https://codepen.io/comadaihiep92/pen/jOPGgxy.
 
 
