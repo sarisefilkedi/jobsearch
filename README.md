@@ -77,5 +77,5 @@ Now, let's go back and access our templates directory. There, you're supposed to
 * login.html
 * register.html
 
-Each respective HTML template represents a page where it links with the respective DEFs in pythons.
+Each respective HTML template represents a page where. You can also see how they are linked to the respective def in pythons, so there are more templates than parts of the app.
 
