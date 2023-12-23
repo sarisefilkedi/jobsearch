@@ -66,4 +66,16 @@ sudo nano login.css
 ```
 This is used for the 'beautification' of our UI, which uses a picture which was shown in an open source website. Here's the link: https://codepen.io/comadaihiep92/pen/jOPGgxy.
 
+Now, let's go back and access our templates directory. There, you're supposed to create the following HTML templates:
+
+* add_book_html
+* book_detail.html
+* book_home.html
+* books_list.html
+* languages.html
+* literature.html
+* login.html
+* register.html
+
+Each respective HTML template represents a page where it links with the respective DEFs in pythons.
 
