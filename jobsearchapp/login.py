@@ -1,5 +1,6 @@
-from models import db, User
+from flask import Blueprint, render_template, request, redirect, url_for, session, flash
 from werkzeug.security import generate_password_hash, check_password_hash
+from models import User, db
 
 login_blueprint = Blueprint('login', __name__)
 
@@ -16,7 +17,6 @@ def create_admin_account():
     else:
         print("Admin account already exists.")
 
-@login_blueprint.route('/')
 @login_blueprint.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
@@ -25,6 +25,7 @@ def login():
         password = request.form['password']
         user = User.query.filter_by(username=username).first()
         if user and check_password_hash(user.password, password):
+            session['username'] = user.username  # Set the username in the session
             return redirect(url_for('books.book_home'))
         else:
             error = 'Invalid Credentials. Please try again.'
@@ -41,6 +42,7 @@ def register():
         db.session.commit()
         return redirect(url_for('login.login'))
     return render_template('register.html')
+
 
 
 
