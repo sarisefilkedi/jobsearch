@@ -26,6 +26,10 @@ After the directory has been created and we got into it, we need to create the P
 
 There we need:
 
-* Flask:
+* Flask: we need this for web application creation.
+* requests: which we need for HTTP requests, and we also need it to interact with APIs.
+* Flask-SQLAlchemy: is needed for our SQL database. It is also an Object-Relational Mapping (ORM) library for Python.
+
+
 
 
