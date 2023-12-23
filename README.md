@@ -6,4 +6,6 @@ THE AIM OF OUR REST API:
 
 The aim of our REST API is to create a platform, a pool of books, where we can borrow or lend books from different literatures and languages.
 
-Let's 
+Let's start with a little introduction to our application's architecture.
+
+
