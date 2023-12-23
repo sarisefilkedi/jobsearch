@@ -79,3 +79,5 @@ Now, let's go back and access our templates directory. There, you're supposed to
 
 Each respective HTML template represents a page where. You can also see how they are linked to the respective def in pythons, so there are more templates than parts of the app.
 
+Now that the set up has been complete, let's look at this app in detail.
+#
