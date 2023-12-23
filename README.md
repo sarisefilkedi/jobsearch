@@ -9,3 +9,4 @@ The aim of our REST API is to create a platform, a pool of books, where we can b
 Let's start with a little introduction to our application's architecture.
 
 
+<img width="883" alt="Screenshot 2023-12-23 at 18 18 31" src="https://github.com/alexanderhovan/jobsearch/assets/148468625/c58945da-a8d2-444f-aceb-5eed67416e02">
