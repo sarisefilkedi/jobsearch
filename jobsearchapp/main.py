@@ -12,8 +12,8 @@ def create_app():
     db.init_app(app)
 
     with app.app_context():
-        db.create_all()  # Create database tables
-        create_admin_account()  # Create the admin account
+        db.create_all()  # Creating database tables
+        create_admin_account()  # Creating the admin account
 
     app.register_blueprint(login_blueprint, url_prefix='/')
     app.register_blueprint(book_blueprint, url_prefix='/books')
