@@ -16,7 +16,7 @@ Here we have our front end which is combined from multiple apps and HTML templat
 Now, let's start with the set-up.
 
 First, you need to create the directory for the project. 
-...
+'''
 cd caniborrow
-...
+'''
 
