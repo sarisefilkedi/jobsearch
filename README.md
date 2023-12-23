@@ -24,4 +24,8 @@ cd caniborrow
 ```
 After the directory has been created and we got into it, we need to create the Python environment and intialise the upload of all the required packages that are contained the requirements.txt file.
 
+There we need:
+
+* Flask:
+
 
