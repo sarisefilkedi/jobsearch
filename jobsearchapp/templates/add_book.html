@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Book</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Add New Book</h1>
+    <div>
+        <input type="text" id="book_search" placeholder="Search Book for Description">
+        <button type="button" onclick="searchDescription()">Search Description</button>
+    </div>
+    <div id="book_summary" style="margin-top: 20px; margin-bottom: 20px;"></div>
+
+    <form method="POST" action="{{ url_for('books.add_book') }}">
+        <input type="text" name="name" placeholder="Book Name" required>
+        <input type="text" name="writer" placeholder="Author" required>
+        <input type="text" name="genre" placeholder="Genre" required>
+        <textarea name="description" id="description" placeholder="Description" required></textarea>
+        <input type="text" name="literature" placeholder="Literature" required>
+        <input type="text" name="language" placeholder="Language" required>
+        <input type="submit" value="Add Book">
+    </form>
+
+    <script>
+        function searchDescription() {
+            var bookName = $('#book_search').val();
+            $.get('/books/booksummary/' + bookName, function(data) {
+                var page = data.query.pages;
+                var pageId = Object.keys(page)[0];
+                var summary = page[pageId].extract;
+                $('#description').val(summary);
+                $('#book_summary').html(summary);
+            });
+        }
+    </script>
+</body>
+</html>
