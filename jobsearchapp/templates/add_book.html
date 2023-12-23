@@ -1,3 +1,4 @@
+  GNU nano 4.8                                                                       add_book.html                                                                                  
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,6 @@
         <button type="button" onclick="searchDescription()">Search Description</button>
     </div>
     <div id="book_summary" style="margin-top: 20px; margin-bottom: 20px;"></div>
-
     <form method="POST" action="{{ url_for('books.add_book') }}">
         <input type="text" name="name" placeholder="Book Name" required>
         <input type="text" name="writer" placeholder="Author" required>
@@ -22,7 +22,6 @@
         <input type="text" name="language" placeholder="Language" required>
         <input type="submit" value="Add Book">
     </form>
-
     <script>
         function searchDescription() {
             var bookName = $('#book_search').val();
