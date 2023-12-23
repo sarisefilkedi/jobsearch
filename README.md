@@ -10,3 +10,9 @@ Let's start with a little introduction to our application's architecture.
 
 
 <img width="883" alt="Screenshot 2023-12-23 at 18 18 31" src="https://github.com/alexanderhovan/jobsearch/assets/148468625/c58945da-a8d2-444f-aceb-5eed67416e02">
+
+Here we have our front end which is combined from multiple apps and HTML templates for these apps, where via CRUD operations they connect to the database for login - this is also how the user rights are being applied - and then we pass to the next page, where we again use the CRUD operations to both connect to our API and the database.
+
+Now, let's start with the set-up.
+
+First, you need to create the directory for the project. 
