@@ -16,7 +16,12 @@ Here we have our front end which is combined from multiple apps and HTML templat
 Now, let's start with the set-up.
 
 First, you need to create the directory for the project. 
-'''
+
+```
+mkdir caniborrow
 cd caniborrow
-'''
+
+```
+After the directory has been created and we got into it, we need to create the Python environment and intialise the upload of all the required packages that are contained the requirements.txt file.
+
 
