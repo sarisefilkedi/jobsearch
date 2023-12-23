@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, jsonify, request
+from flask import Blueprint, render_template, jsonify, request, redirect, url_for, session
 from models import db, Book
 import json
 import requests
@@ -43,6 +43,9 @@ def book_detail(literature, bookname):
 
 @book_blueprint.route('/add', methods=['GET', 'POST'])
 def add_book():
+    if session.get('username') != 'admin':
+        return redirect(url_for('login.login'))
+
     if request.method == 'POST':
         data = request.json
         new_book = Book(
@@ -67,6 +70,7 @@ def get_booksummary(bookname):
         return jsonify(resp.json())
     else:
         return jsonify({'error': resp.reason}), resp.status_code
+
 
 
 
